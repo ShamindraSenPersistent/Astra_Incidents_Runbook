@@ -3,17 +3,21 @@
 ## KubeStatefulSetGenerationMismatch
 
 **Description**
+
 This alert indicates that a Kubernetes statefulset in the cluster is not able to start the desired pods.
 
 **Diagnosis**
+
 Check the status of the stateful set using the kubernetes client (kubectl)
 
     $ kubectl -n <namespace> describe <statefulsetname>
 
 **Mitigation**
+
 Resolving this issue depends on the cause.
 
 **Example**
+
 
     $ kubectl -n pt-my-company-streams-987 describe sts/pf-my-company-streams-987-astracdc-zstra-account-sink
     
